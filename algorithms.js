@@ -111,6 +111,7 @@ function initializeMove() { // 次の数字が落ち始める直前の初期化
 
 function changeNum() { // 落ちる数字の乱数調整
     let sum = 0;
+    maxNum--;
     if (isTwo) maxNum--;
     for (let i = 1; i <= maxNum; i++) sum += Math.pow(2, i);
     let rand = random(sum);
@@ -126,4 +127,5 @@ function changeNum() { // 落ちる数字の乱数調整
         num++;
         num2 = Math.floor(random(1, num));
     }
+    maxNum--;
 }
