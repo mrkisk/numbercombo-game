@@ -114,7 +114,7 @@ function changeNum() { // 落ちる数字の乱数調整
     maxNum--;
     if (isTwo) maxNum--;
     for (let i = 1; i <= maxNum; i++) sum += Math.pow(2, i);
-    let rand = random(sum);
+    let rand = random(sum) - 0.0001;
     for (let i = maxNum; i > 0; i--) {
         if (rand < Math.pow(2, i)) {
             num = maxNum + 1 - i;
@@ -127,5 +127,5 @@ function changeNum() { // 落ちる数字の乱数調整
         num++;
         num2 = Math.floor(random(1, num));
     }
-    maxNum--;
+    maxNum++;
 }
